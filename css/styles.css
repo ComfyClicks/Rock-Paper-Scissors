@@ -1,3 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFAD85;
+}
 
+h1, h3 {
+  color: #FF5C0A;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3em 0;
+}
+header div {
+  border: 3px solid #FF5C0A;
+  border-radius: 6px;
+  width: 40%;
+  box-shadow: 1px 3px 5px #F55200;
+  background-color: #FFBB99;
+}
+header div h1 {
+  font-size: 50px;
+  text-shadow: 0 1px 3px #F55200;
+}
+
+#choosehand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#choosehand div h1 {
+  font-size: 45px;
+  color: #FF5C0A;
+}
+#choosehand div #choicesDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 4em;
+}
+#choosehand div .choices {
+  font-size: 6em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#choosehand div .choices:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+#choosehand div .choices:focus {
+  outline: none;
+}
 
 /*# sourceMappingURL=styles.css.map */

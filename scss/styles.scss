@@ -1,4 +1,109 @@
-$primary-color: #1F2937;
+$primary-color: #FFAD85;
 $secondary-color: #3882F6;
-$text-color: #F9FAF8;
-$secondary-text-color: #E5E7EB;
+$third-color: #FFBB99;
+$text-color: #FF5C0A;
+$hover-color: #F55200;
+$secondary-text-color: #CC4400;
+
+
+// General styles
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+}
+
+h1, h3 {
+  color: $text-color;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3em 0;
+  div {
+    border: 3px solid $text-color;
+    border-radius: 6px;
+    width: 40%;
+    box-shadow: 1px 3px 5px $hover-color;
+    background-color: $third-color;
+    
+    h1 {
+      font-size: 50px;
+      text-shadow: 0 1px 3px $hover-color;
+    }
+  }
+}
+
+
+#choosehand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  div {
+    
+  
+    h1 {
+      font-size: 45px;
+      color: $text-color;
+    }
+
+    #choicesDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 4em;
+    }
+
+    .choices {
+      font-size: 6em;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    
+      &:hover {
+        transform: scale(1.1);
+        text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
+      }
+    
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+#playershands {
+  // styles for playershands section
+
+  #playerschoice {
+    // styles for playerschoice div
+  }
+}
+
+#winner {
+  // styles for outcome section
+}
+
+#scoreboard {
+  // styles for scoreboard section
+
+  .score {
+    // styles for elements with class score
+  }
+}
+
+
+// Footer styles
+#footer {
+  // styles for footer
+}

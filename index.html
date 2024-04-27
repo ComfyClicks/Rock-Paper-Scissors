@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css"> 
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header>
     <div>
-      <h1></h1>
+      <h1>Rock Paper Scissors</h1>
     </div> 
   </header>
 
@@ -17,10 +18,10 @@
     <section id="choosehand">
       <div>
         <h1>Choose Your Hand</h1>
-        <div>
-          <p></p>
-          <p></p>
-          <p></p>
+        <div id="choicesDiv">
+          <button class="choices" id="rock">🪨</button>
+          <button class="choices" id="paper">📃</button>
+          <button class="choices" id="scissors">✂️</button>
         </div>
       </div>
     </section>
@@ -38,27 +39,28 @@
       </div>
     </section>
 
+    <section id="outcomes">
+      <div id="winner">
+        <h1></h1>
+      </div>
 
-    <section id="outcome">
-      <h1></h1>
-    </section>
-
-    <section id="scoreboard">
-      <thead>
-        <tr>
-          <th colspan="2" scope="col">Scoreboard</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Player</th>
-          <td class="score" id="playerScore">0</td>
-        </tr>
-        <tr>
-          <th scope="row">Computer</th>
-          <td class="score" id="computerScore">0</td>
-        </tr>
-      </tbody>
+      <div id="scoreboard">
+        <thead>
+          <tr>
+            <th colspan="2" scope="col">Scoreboard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Player</th>
+            <td class="score" id="playerScore">0</td>
+          </tr>
+          <tr>
+            <th scope="row">Computer</th>
+            <td class="score" id="computerScore">0</td>
+          </tr>
+        </tbody>
+      </div>
     </section>
   </main>
 
