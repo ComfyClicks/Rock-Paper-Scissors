@@ -1,5 +1,4 @@
 $primary-color: #FFAD85;
-$secondary-color: #3882F6;
 $third-color: #FFBB99;
 $text-color: #FF5C0A;
 $hover-color: #F55200;
@@ -12,9 +11,9 @@ body {
   background-color: $primary-color;
 }
 
-h1, h3 {
-  color: $text-color;
-}
+// h1, h3 {
+//   color: $text-color;
+// }
 
 
 header {
@@ -33,10 +32,19 @@ header {
     h1 {
       font-size: 50px;
       text-shadow: 0 1px 3px $hover-color;
+      padding: .1em;
     }
   }
 }
 
+@keyframes pulsate {
+  0% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
 
 #choosehand {
   display: flex;
@@ -44,62 +52,111 @@ header {
   align-items: center;
   text-align: center;
 
-  div {
-    
+  h1 {
+    font-size: 45px;
+    color: $text-color;
+    animation: pulsate 1.5s infinite;
+  }
+
+  #choicesDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 4em;
+  }
+
+  .choices {
+    font-size: 6em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
   
-    h1 {
-      font-size: 45px;
-      color: $text-color;
+    &:hover {
+      transform: scale(1.1);
+      text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 15px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.5);
     }
-
-    #choicesDiv {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      gap: 4em;
-    }
-
-    .choices {
-      font-size: 6em;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    
-      &:hover {
-        transform: scale(1.1);
-        text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.5),
-        0 0 15px rgba(255, 255, 255, 0.5),
-        0 0 20px rgba(255, 255, 255, 0.5);
-      }
-    
-      &:focus {
-        outline: none;
-      }
+  
+    &:focus {
+      outline: none;
     }
   }
 }
 
-#playershands {
-  // styles for playershands section
+#play {
 
-  #playerschoice {
-    // styles for playerschoice div
+  height: 320px;
+  
+  #round {
+    text-align: center;
+    color: $secondary-text-color;
+    font-size: 32px;
+    text-shadow:
+          0 0 10px rgba(255, 255, 255, 0.5),
+          0 0 15px rgba(255, 255, 255, 0.5),
+          0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  h3 {
+    font-size: 30px;
+    color: $text-color;
+  }
+
+  #playDiv {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .chosenHands {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3.5rem;
+  }
+
+  p {
+    font-size: 80px;
+    transform: scale(1.1);
+    margin-top: 0;
+    text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.5);
   }
 }
 
 #winner {
-  // styles for outcome section
+  text-align: center;
+  color: $secondary-text-color;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0;
+  text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 #scoreboard {
-  // styles for scoreboard section
+  text-align: center;
 
-  .score {
-    // styles for elements with class score
+  thead, tbody {
+    border-width: 2px;
+    border-color: black;
   }
+}
+
+
+#winner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 
