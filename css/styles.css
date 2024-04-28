@@ -80,7 +80,7 @@ header div h1 {
 #play #playDiv {
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 26px;
 }
 #play .chosenHands {
   display: flex;
@@ -106,16 +106,24 @@ header div h1 {
 
 #scoreboard {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 #scoreboard thead, #scoreboard tbody {
   border-width: 2px;
   border-color: black;
 }
-
-#winner {
+#scoreboard #scoreboardDiv {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  font-size: 22px;
+}
+
+#footer {
   text-align: center;
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */
