@@ -3,6 +3,10 @@ body {
   background-color: #FFAD85;
 }
 
+h2 {
+  color: #CC4400;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -65,7 +69,7 @@ header div h1 {
 }
 
 #play {
-  height: 320px;
+  height: 250px;
 }
 #play #round {
   text-align: center;
@@ -73,9 +77,8 @@ header div h1 {
   font-size: 32px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
 }
-#play h3 {
+#play h2 {
   font-size: 30px;
-  color: #FF5C0A;
 }
 #play #playDiv {
   display: flex;
@@ -87,6 +90,7 @@ header div h1 {
   justify-content: center;
   text-align: center;
   gap: 3.5rem;
+  height: 200px;
 }
 #play p {
   font-size: 80px;
@@ -107,18 +111,24 @@ header div h1 {
 #scoreboard {
   text-align: center;
   display: flex;
-  flex-direction: column;
-}
-#scoreboard thead, #scoreboard tbody {
-  border-width: 2px;
-  border-color: black;
+  justify-content: center;
 }
 #scoreboard #scoreboardDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  font-size: 22px;
+  gap: 3.5rem;
+  font-size: 20px;
+}
+#scoreboard p {
+  font-size: 24px;
+}
+
+#reset {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 #footer {

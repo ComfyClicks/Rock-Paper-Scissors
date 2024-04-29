@@ -19,6 +19,7 @@ function getComputerChoice() {
 
   let choiceNumber = Math.floor(Math.random() * 3);
   computerChoice = choices[choiceNumber];
+  console.log('Computer chooses', computerChoice);
 }
 
 function displayChoice() {
@@ -71,24 +72,49 @@ function getWinner() {
 }
 
 function resetGame() {
-  const resetWinner = document.querySelector('#winner');
-  resetWinner.textContent = '';
-  round = 1;
-  playerScore = 0;
-  computerScore = 0;
+  const reset = document.querySelector('#reset');
+  const replayButton = document.createElement('button');
+  replayButton.textContent = 'Play Again?';
+  replayButton.id = 'replayButton';
+
+  reset.appendChild(replayButton);
+
+  replayButton.addEventListener('click', () => {
+    round = 1;
+    playerScore = 0;
+    computerScore = 0;
+
+    document.querySelector('#round').textContent = 'Round ' + round;
+    document.querySelector('#playerScore').textContent = playerScore;
+    document.querySelector('#computerScore').textContent = computerScore;
+    reset.removeChild(replayButton);
+
+    getPlayerChoice();
+  }); 
 }
+
 
 function setWinner() {
   const gameWinner = document.querySelector('#round');
   const playerScoreH2 = document.querySelector('#playerScore');
   const computerScoreH2 = document.querySelector('#computerScore');
 
-  if (playerScore === 5) gameWinner.textContent = 'You Win!';
-  if (computerScore === 5) gameWinner.textContent = 'Computer Wins!';
+  if (playerScore === 5) gameWinner.textContent = 'You Win The Game!';
+  if (computerScore === 5) gameWinner.textContent = 'Computer Wins The Game!';
 
   playerScoreH2.textContent = playerScore;
   computerScoreH2.textContent = computerScore;
 }
+
+
+function playGame() {
+  setRound();
+  getComputerChoice();
+  displayChoice();
+  getWinner();
+  setWinner();
+}
+
 
 function getPlayerChoice() {
   const rockBtn = document.querySelector('#rock')
@@ -102,14 +128,7 @@ function getPlayerChoice() {
       playerChoice = this.id;
       console.log('Player chooses', playerChoice);
       round ++;
-      setRound();
-      getComputerChoice();
-      console.log('Computer chooses', computerChoice);
-      displayChoice();
-      console.log('Player Score', playerScore);
-      console.log('Computer Score', computerScore);
-      getWinner();
-      setWinner();
+      playGame();
     } else {
       playerOptions.forEach(choice => {
         choice.removeEventListener('click', handleClick);

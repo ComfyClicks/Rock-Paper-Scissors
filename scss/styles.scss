@@ -1,6 +1,7 @@
 $primary-color: #FFAD85;
 $third-color: #FFBB99;
 $text-color: #FF5C0A;
+$secondary-text-color: #000000;
 $hover-color: #F55200;
 $secondary-text-color: #CC4400;
 
@@ -11,9 +12,9 @@ body {
   background-color: $primary-color;
 }
 
-// h1, h3 {
-//   color: $text-color;
-// }
+h2 {
+  color: $secondary-text-color;
+}
 
 
 header {
@@ -89,7 +90,7 @@ header {
 
 #play {
 
-  height: 320px;
+  height: 250px;
   
   #round {
     text-align: center;
@@ -101,9 +102,8 @@ header {
           0 0 20px rgba(255, 255, 255, 0.5);
   }
 
-  h3 {
+  h2 {
     font-size: 30px;
-    color: $text-color;
   }
 
   #playDiv {
@@ -117,6 +117,7 @@ header {
     justify-content: center;
     text-align: center;
     gap: 3.5rem;
+    height: 200px;
   }
 
   p {
@@ -145,23 +146,27 @@ header {
 #scoreboard {
   text-align: center;
   display: flex;
-  flex-direction: column;
-
-  thead, tbody {
-    border-width: 2px;
-    border-color: black;
-  }
+  justify-content: center;
 
   #scoreboardDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
-    font-size: 22px;
+    gap: 3.5rem;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 24px;
   }
 }
 
-
+#reset {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
 #footer {
   text-align: center;
