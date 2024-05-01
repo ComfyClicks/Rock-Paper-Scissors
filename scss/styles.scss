@@ -95,7 +95,7 @@ header {
   #round {
     text-align: center;
     color: $secondary-text-color;
-    font-size: 32px;
+    font-size: 36px;
     text-shadow:
           0 0 10px rgba(255, 255, 255, 0.5),
           0 0 15px rgba(255, 255, 255, 0.5),
@@ -124,10 +124,6 @@ header {
     font-size: 80px;
     transform: scale(1.1);
     margin-top: 0;
-    text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 15px rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -162,10 +158,25 @@ header {
 }
 
 #reset {
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: center;
   text-align: center;
+
+  button {
+    font-size: 20px;
+    border: 3px solid $text-color;
+    border-radius: 6px;
+    height: 50px;
+    width: 10%;
+    box-shadow: 1px 3px 5px $hover-color;
+    background-color: $third-color;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 3px 5px 6px $hover-color;
+    }
+  }
 }
 
 #footer {

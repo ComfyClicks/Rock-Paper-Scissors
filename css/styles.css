@@ -74,7 +74,7 @@ header div h1 {
 #play #round {
   text-align: center;
   color: #CC4400;
-  font-size: 32px;
+  font-size: 36px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
 }
 #play h2 {
@@ -96,7 +96,6 @@ header div h1 {
   font-size: 80px;
   transform: scale(1.1);
   margin-top: 0;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 #winner {
@@ -125,10 +124,23 @@ header div h1 {
 }
 
 #reset {
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+#reset button {
+  font-size: 20px;
+  border: 3px solid #FF5C0A;
+  border-radius: 6px;
+  height: 50px;
+  width: 10%;
+  box-shadow: 1px 3px 5px #F55200;
+  background-color: #FFBB99;
+}
+#reset button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 5px 6px #F55200;
 }
 
 #footer {

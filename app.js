@@ -1,4 +1,4 @@
-let round = 1;
+let round = 0;
 let playerScore = 0;
 let computerScore = 0;
 
@@ -7,12 +7,14 @@ let computerChoice;
 
 let winner;
 
+
 function setRound() {
   const getRound = document.querySelector('#round');
   getRound.textContent = 'Round ' + round.toString();
 }
 
 setRound();
+
 
 function getComputerChoice() {
   const choices = ['rock', 'paper','scissors'];
@@ -21,6 +23,7 @@ function getComputerChoice() {
   computerChoice = choices[choiceNumber];
   console.log('Computer chooses', computerChoice);
 }
+
 
 function displayChoice() {
   const playersHand = document.querySelector('#playersHand');
@@ -34,6 +37,7 @@ function displayChoice() {
   if (computerChoice === 'paper') computersHand.textContent = '📃';
   if (computerChoice === 'scissors') computersHand.textContent = '✂️';
 }
+
 
 function getWinner() {
   const winnerHeader = document.querySelector('#winner');
@@ -71,6 +75,7 @@ function getWinner() {
   }
 }
 
+
 function resetGame() {
   const reset = document.querySelector('#reset');
   const replayButton = document.createElement('button');
@@ -80,13 +85,15 @@ function resetGame() {
   reset.appendChild(replayButton);
 
   replayButton.addEventListener('click', () => {
-    round = 1;
+    round = 0;
     playerScore = 0;
     computerScore = 0;
 
     document.querySelector('#round').textContent = 'Round ' + round;
     document.querySelector('#playerScore').textContent = playerScore;
     document.querySelector('#computerScore').textContent = computerScore;
+    document.querySelector('#playersHand').textContent = '-';
+    document.querySelector('#computersHand').textContent = '-';
     reset.removeChild(replayButton);
 
     getPlayerChoice();
@@ -99,8 +106,14 @@ function setWinner() {
   const playerScoreH2 = document.querySelector('#playerScore');
   const computerScoreH2 = document.querySelector('#computerScore');
 
-  if (playerScore === 5) gameWinner.textContent = 'You Win The Game!';
-  if (computerScore === 5) gameWinner.textContent = 'Computer Wins The Game!';
+  if (playerScore === 5) {
+    gameWinner.textContent = 'You Win The Game!';
+    resetGame();
+  }
+  if (computerScore === 5) {
+    gameWinner.textContent = 'Computer Wins The Game!';
+    resetGame();
+  }
 
   playerScoreH2.textContent = playerScore;
   computerScoreH2.textContent = computerScore;
@@ -128,12 +141,12 @@ function getPlayerChoice() {
       playerChoice = this.id;
       console.log('Player chooses', playerChoice);
       round ++;
+      
       playGame();
     } else {
       playerOptions.forEach(choice => {
         choice.removeEventListener('click', handleClick);
       });
-      resetGame();
     }
   };
 
@@ -141,8 +154,5 @@ function getPlayerChoice() {
     choice.addEventListener('click', handleClick);
   });
 }
-
-
-
 
 getPlayerChoice();
