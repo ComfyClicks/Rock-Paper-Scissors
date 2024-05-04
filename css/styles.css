@@ -27,14 +27,6 @@ header div h1 {
   padding: 0.1em;
 }
 
-@keyframes pulsate {
-  0% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
-  }
-  100% {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
-  }
-}
 #choosehand {
   display: flex;
   flex-direction: column;
@@ -43,8 +35,8 @@ header div h1 {
 }
 #choosehand h1 {
   font-size: 45px;
-  color: #FF5C0A;
-  animation: pulsate 1.5s infinite;
+  color: #000000;
+  text-shadow: 1px 1px 3px #F55200;
 }
 #choosehand #choicesDiv {
   display: flex;
@@ -73,12 +65,13 @@ header div h1 {
 }
 #play #round {
   text-align: center;
-  color: #CC4400;
   font-size: 36px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 3px #F55200;
 }
 #play h2 {
   font-size: 30px;
+  color: #FF5C0A;
+  text-shadow: 1px 1px 3px #000000;
 }
 #play #playDiv {
   display: flex;
@@ -119,12 +112,16 @@ header div h1 {
   gap: 3.5rem;
   font-size: 20px;
 }
+#scoreboard h2 {
+  color: #FF5C0A;
+  text-shadow: 1px 1px 3px #000000;
+}
 #scoreboard p {
   font-size: 24px;
 }
 
 #reset {
-  height: 200px;
+  height: 160px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -134,18 +131,19 @@ header div h1 {
   border: 3px solid #FF5C0A;
   border-radius: 6px;
   height: 50px;
-  width: 10%;
+  width: 135px;
+  text-shadow: 0 1px 3px #F55200;
   box-shadow: 1px 3px 5px #F55200;
   background-color: #FFBB99;
 }
 #reset button:hover {
   transform: scale(1.05);
+  text-shadow: 0 1px 3px #F55200;
   box-shadow: 3px 5px 6px #F55200;
 }
 
 #footer {
   text-align: center;
-  margin-top: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */
