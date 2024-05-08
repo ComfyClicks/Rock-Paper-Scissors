@@ -1,6 +1,6 @@
 <div align="center">
 
-# Rock Paper Scissors Game created for The Odin Project
+# Rock Paper Scissors
 
 
 ## Technologies Used 
