@@ -79,6 +79,7 @@ header div h1 {
   text-align: center;
   gap: 3.5rem;
   height: 200px;
+  text-shadow: 1px 1px 3px #F55200;
 }
 #play p {
   font-size: 80px;
