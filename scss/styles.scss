@@ -98,7 +98,6 @@ header {
     gap: 3.5rem;
     height: 200px;
     text-shadow: 1px 1px 3px $hover-color;
-
   }
 
   p {
@@ -166,4 +165,161 @@ header {
 
 #footer {
   text-align: center;
+
+  a {
+    color: $text-color;
+  }
+  a:hover {
+    color: $hover-color;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 2em 0;
+    div {
+      width: 80%;
+      h1 {
+        font-size: 35px;
+        padding: 0.2em;
+      }
+    }
+  }
+
+  #choosehand {
+    h1 {
+      font-size: 32px;
+      margin: 1em 0;
+    }
+
+    #choicesDiv {
+      gap: 2em;
+    }
+
+    .choices {
+      font-size: 4em;
+    }
+  }
+
+  #play {
+    height: auto;
+    
+    #round {
+      font-size: 28px;
+      margin: 1em 0;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .chosenHands {
+      flex-direction: row;
+      gap: 1.5rem;
+      height: auto;
+    }
+
+    p {
+      font-size: 50px;
+    }
+  }
+
+  #scoreboard {
+    #scoreboardDiv {
+      flex-direction: row;
+      gap: 2rem;
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 0.5em 0;
+    }
+
+    p {
+      font-size: 30px;
+      margin: 0.5em 0;
+    }
+  }
+
+  #reset {
+    height: 120px;
+    
+    button {
+      font-size: 18px;
+      height: 45px;
+      width: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin: 1em 0;
+    div {
+      width: 90%;
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  #choosehand {
+    h1 {
+      font-size: 26px;
+    }
+
+    #choicesDiv {
+      gap: 1.5em;
+    }
+
+    .choices {
+      font-size: 3em;
+    }
+  }
+
+  #play {
+    #round {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 50px;
+    }
+  }
+
+  #scoreboard {
+    #scoreboardDiv {
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 30px;
+    }
+  }
+
+  #reset {
+    height: 100px;
+    
+    button {
+      font-size: 16px;
+      height: 40px;
+      width: 110px;
+    }
+  }
+
+  #footer {
+    font-size: 14px;
+    margin-top: 1em;
+  }
+
+
 }

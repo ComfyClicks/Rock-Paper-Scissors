@@ -141,5 +141,123 @@ header div h1 {
 #footer {
   text-align: center;
 }
+#footer a {
+  color: #FF5C0A;
+}
+#footer a:hover {
+  color: #F55200;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 2em 0;
+  }
+  header div {
+    width: 80%;
+  }
+  header div h1 {
+    font-size: 35px;
+    padding: 0.2em;
+  }
+  #choosehand h1 {
+    font-size: 32px;
+    margin: 1em 0;
+  }
+  #choosehand #choicesDiv {
+    gap: 2em;
+  }
+  #choosehand .choices {
+    font-size: 4em;
+  }
+  #play {
+    height: auto;
+  }
+  #play #round {
+    font-size: 28px;
+    margin: 1em 0;
+  }
+  #play h2 {
+    font-size: 20px;
+  }
+  #play .chosenHands {
+    flex-direction: row;
+    gap: 1.5rem;
+    height: auto;
+  }
+  #play p {
+    font-size: 50px;
+  }
+  #scoreboard #scoreboardDiv {
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 18px;
+  }
+  #scoreboard h2 {
+    font-size: 20px;
+    margin: 0.5em 0;
+  }
+  #scoreboard p {
+    font-size: 30px;
+    margin: 0.5em 0;
+  }
+  #reset {
+    height: 120px;
+  }
+  #reset button {
+    font-size: 18px;
+    height: 45px;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    margin: 1em 0;
+  }
+  header div {
+    width: 90%;
+  }
+  header div h1 {
+    font-size: 28px;
+  }
+  #choosehand h1 {
+    font-size: 26px;
+  }
+  #choosehand #choicesDiv {
+    gap: 1.5em;
+  }
+  #choosehand .choices {
+    font-size: 3em;
+  }
+  #play #round {
+    font-size: 24px;
+  }
+  #play h2 {
+    font-size: 20px;
+  }
+  #play p {
+    font-size: 50px;
+  }
+  #scoreboard #scoreboardDiv {
+    font-size: 16px;
+  }
+  #scoreboard h2 {
+    font-size: 20px;
+  }
+  #scoreboard p {
+    font-size: 30px;
+  }
+  #reset {
+    height: 100px;
+  }
+  #reset button {
+    font-size: 16px;
+    height: 40px;
+    width: 110px;
+  }
+  #footer {
+    font-size: 14px;
+    margin-top: 1em;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
